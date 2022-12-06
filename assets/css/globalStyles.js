@@ -17,6 +17,14 @@ const globalStyles = StyleSheet.create({
         alignSelf:"center",
         resizeMode:"contain"
     },
+    imgReceta:{
+        width:400,
+        height:500,
+        alignSelf:"center",
+        justifyContent:"center",
+        resizeMode:"contain"
+    }
+    ,
     containTxt:{
         backgroundColor:"#fff",
         width:270,

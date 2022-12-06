@@ -2,13 +2,10 @@ import React,{useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
   Image,
-  TextInput,
   Pressable,
   Modal
 } from 'react-native';
@@ -16,11 +13,14 @@ import globalStyles from '../assets/css/globalStyles';
 import Modales from './Modal';
 import Modales2 from './Modal2';
 import Modales3 from './Modal3';
-
+import Historial from './Historial';
+import AgendarCita from './AgendarCita';
 const HomeScreen = ({navigation}) => {
   const [modal,setModal] = useState(false)
   const [modal2,setModal2] = useState(false)
   const [modal3,setModal3] = useState(false)
+  //historial
+  const [recargar,setRecargar] = useState(true)
 
   return(
     <SafeAreaView style={globalStyles.containerAll}>
@@ -101,6 +101,13 @@ const HomeScreen = ({navigation}) => {
           setModal3={setModal3}
           />
         </Modal>
+        <Historial
+        setRecargar={setRecargar}
+        recargar={recargar}
+        />
+        <AgendarCita
+        setRecargar={setRecargar}
+        />
     </SafeAreaView>
   )
 }

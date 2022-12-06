@@ -16,12 +16,20 @@ import globalStyles from '../assets/css/globalStyles';
 
 const Login = ({navigation}) => {
   const [clave,setClave] = useState("");
-
+  
   const verificar = () => {
-    Alert.alert(
-      "Pruebas"
-    )
-    navigation.navigate("HomeScreen")
+    if(clave == "prueba" ){
+      navigation.navigate("HomeScreen")
+      setClave("")
+    }else if(clave == "Prueba" ){
+      navigation.navigate("HomeScreen")
+      setClave("")
+    }else{
+      Alert.alert(
+        "Error",
+        "Credencial incorrecta"
+      )
+    }
   }
   return(
     <SafeAreaView style={globalStyles.containerAll}>
@@ -65,7 +73,7 @@ const styles = StyleSheet.create({
     alignItems:"center"
   },
   img:{
-    marginTop:-20,
+    marginTop:-50,
     width:320,
     height:320,
     alignSelf:"center",
