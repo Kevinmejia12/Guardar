@@ -24,11 +24,11 @@ const Historial = (recargar,setRecargar) => {
   },[recargar])
 
   const getCitas = async () => {
-    const respuesta = await axios.get("http://192.168.3.120/prueba/")
+    const respuesta = await axios.get("http://192.168.1.83/prueba/")
     setListaCitas(respuesta.data)
     setRecargar(false)
   }
-
+  
   const renderItem = ({item}) => {
     return(
       <Pressable style={styles.containerCita} onPress={()=> setModalReceta(true)} >
